@@ -2,13 +2,11 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Группы пользователей простой");
 ?><?$APPLICATION->IncludeComponent(
-	"tasks:group.of.users", 
-	"templates", 
-	array(
-		"COMPONENT_TEMPLATE" => "templates",
-		"CACHE_TYPE" => "A",
+	"tasks:groups.of.users",
+	"",
+	Array(
 		"CACHE_TIME" => "36000000",
-		"HEADING_OF_PAGE" => "КАСТОМНЫЙ ЗАГОЛОВОК"
-	),
-	false
+		"CACHE_TYPE" => "A",
+		"HEADING_OF_PAGE" => "Кастомный заголовок страницы"
+	)
 );?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

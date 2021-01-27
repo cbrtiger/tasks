@@ -1,0 +1,23 @@
+table{
+    width:100%;
+}
+table td,table th{
+    width:25%;
+    border:1px solid #ccc;
+    border-collapse: collapse;
+    padding:15px;
+    vertical-align: middle;
+}
+
+table td:first-child,table th:first-child{
+    text-align:center;
+}
+
+table td:last-child,table th:last-child{
+    padding:0;
+}
+
+table td a{
+    display:block;
+    padding:30px;
+}

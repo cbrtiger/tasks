@@ -6,6 +6,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Группы пользователей комплексный", 
+		"/gruppy-polzovateley-kompleksnyy/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
