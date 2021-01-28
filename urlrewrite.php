@@ -1,13 +1,5 @@
 <?php
 $arUrlRewrite=array (
-  3 => 
-  array (
-    'CONDITION' => '#^/gruppy-polzovateley-kompleksnyy/#',
-    'RULE' => '',
-    'ID' => 'tasks:groups.complex',
-    'PATH' => '/gruppy-polzovateley-kompleksnyy/index.php',
-    'SORT' => 100,
-  ),
   0 => 
   array (
     'CONDITION' => '#^/services/#',
