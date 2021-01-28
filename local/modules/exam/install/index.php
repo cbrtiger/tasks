@@ -12,6 +12,8 @@ Class exam extends CModule
     var $MODULE_DESCRIPTION;
     var $MODULE_CSS;
     var $MODULE_GROUP_RIGHTS = "Y";
+    private $INSTALL_DIR;
+
 
     function __construct()
     {
@@ -21,6 +23,7 @@ Class exam extends CModule
 
         $this->MODULE_VERSION = $arModuleVersion["VERSION"];
         $this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
+        $this->INSTALL_DIR = dirname(__file__);
 
         $this->MODULE_NAME = "Задачка";
         $this->MODULE_DESCRIPTION = "Модуль задачи выводит комплексный компонент с группами пользователей";
@@ -51,11 +54,19 @@ Class exam extends CModule
 
     function InstallFiles()
     {
+        CopyDirFiles(
+            $this->INSTALL_DIR . '/components',
+            $_SERVER['DOCUMENT_ROOT'] . '/bitrix/components',
+            true,
+            true
+        );
+
         return true;
     }
 
     function UnInstallFiles()
     {
+        DeleteDirFilesEx("/bitrix/components/tasks");
         return true;
     }
 
